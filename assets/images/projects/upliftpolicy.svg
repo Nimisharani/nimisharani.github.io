@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-03 upliftpolicy architecture</title>
+<desc>Blueprint schematic: generator feeds study split, which branches to uplift learners and cross-fitted nuisances. Learners feed policy. Policy and nuisances feed evaluation, which feeds the report. Readouts: +4.47 pts uplift-ranked and -0.23 pts churn-ranked retention.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="ac" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:0.06em;fill:#EAF3FB;text-transform:uppercase}
+.t{font-size:11px;font-weight:bold}
+.s{font-size:9px;fill-opacity:0.7}
+.k{fill:#9FDBFF}
+.b{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.a{fill:#0D3B66;stroke:#9FDBFF;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.m{fill:none;stroke:#9FDBFF;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="22" fill="#0D3B66" stroke="#EAF3FB" stroke-opacity="0.6"/>
+<text x="26" y="31" font-size="10" class="k">PN-03 · UPLIFTPOLICY · UPLIFT TARGETING + DR EVALUATION</text>
+
+<!-- arrows -->
+<path class="m" d="M116 166H143" marker-end="url(#ac)"/>
+<path class="m" d="M243 166H256V100H270" marker-end="url(#ac)"/>
+<path class="l" d="M256 166V232H270" marker-end="url(#ar)"/>
+<path class="m" d="M370 100H397" marker-end="url(#ac)"/>
+<path class="m" d="M497 100H510V154H524" marker-end="url(#ac)"/>
+<path class="l" d="M370 232H517V178H524" marker-end="url(#ar)"/>
+<path class="m" d="M574 202V276" marker-end="url(#ac)"/>
+<path class="m" stroke-dasharray="4 3" d="M400 318H524" marker-end="url(#ac)"/>
+
+<!-- boxes -->
+<rect class="a" x="16" y="130" width="100" height="72"/>
+<text class="t k" x="24" y="148">GENERATOR</text>
+<text class="s" x="24" y="164">PLANTED ITE</text>
+<text class="s" x="24" y="176">+ SEGMENTS</text>
+
+<rect class="a" x="143" y="130" width="100" height="72"/>
+<text class="t k" x="151" y="148">STUDY</text>
+<text class="s" x="151" y="164">TRAIN / EVAL</text>
+<text class="s" x="151" y="176">SPLIT</text>
+
+<rect class="a" x="270" y="64" width="100" height="72"/>
+<text class="t k" x="278" y="82">LEARNERS</text>
+<text class="s" x="278" y="98">T-LEARNER</text>
+<text class="s" x="278" y="110">TRANSFORMED</text>
+<text class="s" x="278" y="122">OUTCOME</text>
+
+<rect class="b" x="270" y="196" width="100" height="72"/>
+<text class="t" x="278" y="214">NUISANCES</text>
+<text class="s" x="278" y="230">CROSS-FITTED</text>
+<text class="s" x="278" y="242">OUTCOME +</text>
+<text class="s" x="278" y="254">PROPENSITY</text>
+
+<rect class="a" x="397" y="64" width="100" height="72"/>
+<text class="t k" x="405" y="82">POLICY</text>
+<text class="s" x="405" y="98">TOP-K</text>
+<text class="s" x="405" y="110">GUARDRAIL</text>
+<text class="s" x="405" y="122">NO NEG. UPLIFT</text>
+
+<rect class="a" x="524" y="130" width="100" height="72"/>
+<text class="t k" x="532" y="148">EVALUATION</text>
+<text class="s" x="532" y="164">DM · IPW · DR</text>
+<text class="s" x="532" y="176">BOOTSTRAP CI</text>
+<text class="s" x="532" y="188">QINI CURVE</text>
+
+<rect class="a" x="524" y="276" width="100" height="56"/>
+<text class="t k" x="532" y="294">REPORT</text>
+<text class="s" x="532" y="310">EXPECTED VALUE</text>
+
+<text class="s" x="392" y="224">NUISANCES TO DR/IPW</text>
+
+<!-- readouts -->
+<text class="s" x="16" y="290">TRUE INCREMENTAL RETENTION VS NO CONTACT</text>
+<rect class="a" x="16" y="298" width="184" height="40"/>
+<text class="s" x="24" y="312">TOP-30% BY UPLIFT</text>
+<text class="t k" x="24" y="329">+4.47 PTS RETENTION</text>
+<rect class="a" x="216" y="298" width="184" height="40"/>
+<text class="s" x="224" y="312">TOP-30% BY CHURN SCORE</text>
+<text class="t k" x="224" y="329">−0.23 PTS RETENTION</text>
+<text class="s" x="420" y="312">HEADLINE</text>
+</svg>

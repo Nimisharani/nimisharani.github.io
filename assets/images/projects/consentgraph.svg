@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="t d">
+<title id="t">PN-05 consentgraph architecture</title>
+<desc id="d">Blueprint: fixtures feed generateCandidates, then loadGraph with a threshold into SQLite holding record, edge and consent tables. profileFor and audienceFor read it, and profileFor feeds evaluate. Readouts: 1,432 records, 472 people, marketing precision 1.0000.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="k" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:0.06em;fill:#EAF3FB;text-transform:uppercase}
+.h{font-size:11px}
+.s{font-size:9px;fill-opacity:0.7}
+.bx{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.kb{fill:#0D3B66;stroke:#9FDBFF;stroke-width:1}
+.ln{fill:none;stroke:#EAF3FB;stroke-opacity:0.8;stroke-width:1}
+.kl{fill:none;stroke:#9FDBFF;stroke-width:1}
+.v{font-size:11px;fill:#9FDBFF;font-weight:bold}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="24" class="bx" stroke-opacity="0.5"/>
+<text x="26" y="32" class="h">PN-05 · CONSENTGRAPH · CONSENT-GATED IDENTITY RESOLUTION</text>
+
+<rect x="16" y="60" width="160" height="56" class="bx"/>
+<text x="26" y="78" class="h">FIXTURES</text>
+<text x="26" y="92" class="s">HOUSEHOLDS,</text>
+<text x="26" y="104" class="s">SHARED DEVICES</text>
+
+<rect x="232" y="60" width="160" height="56" class="bx"/>
+<text x="242" y="78" class="h">GENERATECANDIDATES</text>
+<text x="242" y="92" class="s">DETERMINISTIC +</text>
+<text x="242" y="104" class="s">NAME + POSTCODE</text>
+
+<rect x="448" y="60" width="176" height="56" class="bx"/>
+<text x="458" y="78" class="h">LOADGRAPH</text>
+<text x="458" y="92" class="s">THRESHOLD FILTER</text>
+<text x="458" y="104" class="s">EDGES ABOVE SCORE</text>
+
+<line x1="176" y1="88" x2="230" y2="88" class="kl" marker-end="url(#k)"/>
+<line x1="392" y1="88" x2="446" y2="88" class="kl" marker-end="url(#k)"/>
+<line x1="536" y1="116" x2="536" y2="148" class="kl" marker-end="url(#k)"/>
+
+<rect x="448" y="150" width="176" height="96" class="kb"/>
+<line x1="448" y1="155" x2="624" y2="155" class="kl" stroke-opacity="0.5"/>
+<text x="536" y="171" class="h" text-anchor="middle">SQLITE · IN MEMORY</text>
+<rect x="458" y="182" width="48" height="24" class="bx"/>
+<rect x="512" y="182" width="48" height="24" class="bx"/>
+<rect x="566" y="182" width="48" height="24" class="bx"/>
+<text x="482" y="198" class="s" text-anchor="middle" fill-opacity="1">RECORD</text>
+<text x="536" y="198" class="s" text-anchor="middle">EDGE</text>
+<text x="590" y="198" class="s" text-anchor="middle">CONSENT</text>
+<text x="536" y="232" class="s" text-anchor="middle">EDGE KIND LISTS PURPOSES</text>
+
+<rect x="232" y="150" width="160" height="46" class="bx" stroke="#9FDBFF" stroke-opacity="1"/>
+<text x="242" y="167" class="h">PROFILEFOR</text>
+<text x="242" y="182" class="s">RECURSIVE CTE · PURPOSE</text>
+
+<rect x="232" y="202" width="160" height="46" class="bx"/>
+<text x="242" y="219" class="h">AUDIENCEFOR</text>
+<text x="242" y="234" class="s">CONSENTED RECORDS ONLY</text>
+
+<line x1="448" y1="173" x2="394" y2="173" class="kl" marker-end="url(#k)"/>
+<line x1="448" y1="225" x2="394" y2="225" class="ln" marker-end="url(#a)"/>
+
+<rect x="16" y="150" width="160" height="46" class="kb"/>
+<text x="26" y="165" class="h">EVALUATE</text>
+<text x="26" y="177" class="s">PRECISION · RECALL</text>
+<text x="26" y="188" class="s">HOUSEHOLD CONFUSIONS</text>
+<line x1="232" y1="173" x2="178" y2="173" class="kl" marker-end="url(#k)"/>
+
+<rect x="16" y="208" width="160" height="48" fill="none" stroke="#EAF3FB" stroke-opacity="0.5" stroke-dasharray="4 3"/>
+<text x="26" y="220" class="s" fill-opacity="1">PURPOSE SCOPES</text>
+<text x="26" y="231" class="s">EMAIL_MARKETING</text>
+<text x="26" y="241" class="s">AD_PLATFORM_MATCH</text>
+<text x="26" y="251" class="s">SERVICE</text>
+
+<text x="16" y="274" class="s">READOUTS</text>
+<rect x="16" y="284" width="190" height="48" class="bx"/>
+<text x="26" y="300" class="s">FIXTURES · SOURCE RECORDS</text>
+<text x="26" y="321" class="v">1,432</text>
+<rect x="225" y="284" width="190" height="48" class="bx"/>
+<text x="235" y="300" class="s">FIXTURES · REAL PEOPLE</text>
+<text x="235" y="321" class="v">472</text>
+<rect x="434" y="284" width="190" height="48" class="kb"/>
+<text x="444" y="300" class="s">PRECISION · MARKETING</text>
+<text x="444" y="321" class="v">1.0000</text>
+</svg>

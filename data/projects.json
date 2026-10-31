@@ -1,0 +1,249 @@
+{
+  "projects": [
+    {
+      "name": "Retail Analytics: Customer Segmentation & Revenue Optimization",
+      "category": "Retail analytics",
+      "description": "Analysis of retail transaction data to understand customer purchasing behavior, seasonal sales trends and product category performance, turned into recommendations for revenue, targeting and inventory planning.",
+      "highlights": [
+        "46–55 age group contributes the highest revenue; Saturdays generate maximum revenue.",
+        "Q4 recorded the highest sales while Q3 showed a seasonal dip.",
+        "Revenue differences driven by purchase volume, not pricing; medium baskets give the highest average transaction value."
+      ],
+      "technologies": [
+        "Python",
+        "pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Jupyter Notebook"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/retail-analytics-customer-segmentation"
+      },
+      "image": "assets/images/projects/retail-analytics-customer-segmentation.svg",
+      "featured": true,
+      "hero": {
+        "src": "assets/images/projects/retail-analytics-customer-segmentation-hero.jpg",
+        "alt": "Retail Analytics: Customer Segmentation & Revenue Optimization — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "marginbridge",
+      "category": "Pricing analytics",
+      "description": "A price-volume-mix margin bridge that reconciles exactly, plus price elasticity estimated with the discount confounder controlled, scored against synthetic data where the true elasticity is known.",
+      "highlights": [
+        "Bridge on 6,231 transaction lines reconciles exactly: volume +341,470, mix −275,020, price −37,935.",
+        "Mix shift explains 88% of the margin headwind and price erosion 12%.",
+        "Corrected elasticity intervals cover the true value in every segment; naive estimates sit near zero."
+      ],
+      "technologies": [
+        "Python",
+        "OLS regression",
+        "Confidence intervals",
+        "unittest",
+        "GitHub Actions"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/marginbridge"
+      },
+      "image": "assets/images/projects/marginbridge.svg",
+      "hero": {
+        "src": "assets/images/projects/marginbridge-hero.jpg",
+        "alt": "marginbridge — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "upliftpolicy",
+      "category": "Customer analytics",
+      "description": "Retention targeting by uplift instead of churn propensity, with Qini curves and doubly-robust policy evaluation that surfaces customers contact drives away.",
+      "highlights": [
+        "Top 30% by uplift adds 4.47 points of retention; top 30% by churn score loses 0.23 points.",
+        "Sleeping dogs are 37% of the churn-ranked list vs 4% of the uplift-ranked list.",
+        "T-learner uplift correlates +0.638 with the true treatment effect; 34 tests."
+      ],
+      "technologies": [
+        "Python",
+        "Logistic regression",
+        "Causal inference",
+        "JavaScript",
+        "Node.js",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/upliftpolicy",
+        "demo": "https://Nimisharani.github.io/upliftpolicy/"
+      },
+      "image": "assets/images/projects/upliftpolicy.svg",
+      "hero": {
+        "src": "assets/images/projects/upliftpolicy-hero.jpg",
+        "alt": "upliftpolicy — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "pacingloop",
+      "category": "Marketing analytics",
+      "description": "Real-time campaign pacing with hour-of-week median/MAD baselines and a damped, rate-limited controller that avoids false alarms on normal seasonal peaks.",
+      "highlights": [
+        "4/4 planted incidents detected and classified with 0.00 false alarms per week.",
+        "Damped controller: 279 adjustments and 33 reversals vs 488 and 117 for a naive proportional controller.",
+        "MAD baseline moves only from 965 to 970 when incidents enter history, vs standard deviation 770 to 3465."
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "Robust statistics",
+        "Anomaly detection",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/pacingloop",
+        "demo": "https://Nimisharani.github.io/pacingloop/"
+      },
+      "image": "assets/images/projects/pacingloop.svg",
+      "hero": {
+        "src": "assets/images/projects/pacingloop-hero.jpg",
+        "alt": "pacingloop — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "consentgraph",
+      "category": "Customer data",
+      "description": "Identity resolution where per-purpose consent gates the graph join itself, with match quality measured as precision against planted ground truth and a household-confusion metric.",
+      "highlights": [
+        "1,432 source records resolved against 472 real people across 300 synthetic households.",
+        "Marketing purposes hold 1.0000 precision with zero household confusions.",
+        "Service purpose trades precision (0.8458) for 1.000 recall, reported rather than averaged."
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "SQLite",
+        "Recursive CTEs",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/consentgraph",
+        "demo": "https://Nimisharani.github.io/consentgraph/"
+      },
+      "image": "assets/images/projects/consentgraph.svg",
+      "hero": {
+        "src": "assets/images/projects/consentgraph-hero.jpg",
+        "alt": "consentgraph — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "erasure",
+      "category": "Data governance",
+      "description": "GDPR erasure driven by column-level lineage across multiple data stores, verified by an adversary that tries to re-identify the person who was just deleted.",
+      "highlights": [
+        "Lineage discovery finds 16 PII columns across 5 stores.",
+        "Naive table-list erasure leaves the subject identifiable; lineage-driven erasure does not.",
+        "Dry run by default, producing a certificate of tables touched and rows affected; 17 tests."
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "SQLite",
+        "Data lineage",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/erasure",
+        "demo": "https://Nimisharani.github.io/erasure/"
+      },
+      "image": "assets/images/projects/erasure.svg",
+      "hero": {
+        "src": "assets/images/projects/erasure-hero.jpg",
+        "alt": "erasure — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "dagcache",
+      "category": "Data pipelines",
+      "description": "A content-addressed, parallel pipeline runner for reproducible workflows that hashes code, params and data, explains why a stage is stale and traces artifact lineage.",
+      "highlights": [
+        "SHA-256 cache keys over code, params and input content, with early cutoff to stop needless re-runs.",
+        "165 tests with mypy --strict and a coverage gate.",
+        "About 4,600 lines of typed Python with local or S3 remote caching."
+      ],
+      "technologies": [
+        "Python",
+        "YAML",
+        "AWS S3",
+        "mypy",
+        "uv",
+        "GitHub Actions"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/dagcache"
+      },
+      "image": "assets/images/projects/dagcache.svg",
+      "hero": {
+        "src": "assets/images/projects/dagcache-hero.jpg",
+        "alt": "dagcache — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "ratevault",
+      "category": "Insurance pricing",
+      "description": "A motor insurance quote engine with bitemporal rate tables, so any past quote reprices exactly using the rates and rules in force at the time.",
+      "highlights": [
+        "Backdated correction shows GBP 1995.19 as quoted vs GBP 1671.64 as corrected: GBP 323.55 owed back.",
+        "Factor-by-factor explanation of every premium; overlap protection enforced by database triggers.",
+        "Twelve tests run in CI on Node 24."
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "SQLite",
+        "Bitemporal modeling",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/ratevault",
+        "demo": "https://Nimisharani.github.io/ratevault/"
+      },
+      "image": "assets/images/projects/ratevault.svg",
+      "hero": {
+        "src": "assets/images/projects/ratevault-hero.jpg",
+        "alt": "ratevault — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "permitflow",
+      "category": "Data integrity",
+      "description": "A municipal permitting workflow where a declared statechart compiles to database constraints and triggers, so illegal status transitions are rejected by the database itself.",
+      "highlights": [
+        "11 states and 15 declared transitions compiled into a transition table and triggers.",
+        "Swept all 95 illegal pairs: 95 rejected, 0 accepted.",
+        "Append-only history; a raw-SQL bulk import that skips the application is rejected too."
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "SQLite",
+        "PostgreSQL",
+        "SQL triggers",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/Nimisharani/permitflow",
+        "demo": "https://Nimisharani.github.io/permitflow/"
+      },
+      "image": "assets/images/projects/permitflow.svg",
+      "hero": {
+        "src": "assets/images/projects/permitflow-hero.jpg",
+        "alt": "permitflow — Concept render",
+        "caption": "Concept render"
+      }
+    }
+  ]
+}

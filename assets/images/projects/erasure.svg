@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-06 erasure: schematic</title>
+<desc>Estate and column catalogue feed discover(), then planFor() with retention obligations, then erase() (dry run by default), which produces an ErasureCertificate and feeds the reidentify() adversary. The naiveErase baseline also feeds the adversary.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="aw" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto"><polygon points="0,0 8,4 0,8" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="ac" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto"><polygon points="0,0 8,4 0,8" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;fill:#EAF3FB;text-transform:uppercase}
+.s{fill-opacity:0.7}
+.n{font-size:10px;font-weight:bold}
+.k{fill:#9FDBFF}
+.big{font-size:14px;font-weight:bold;fill:#9FDBFF}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.bk{fill:none;stroke:#9FDBFF;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.lk{fill:none;stroke:#9FDBFF;stroke-width:1}
+.d{fill:none;stroke:#EAF3FB;stroke-opacity:0.5;stroke-width:1;stroke-dasharray:3 3}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="22" class="b"/>
+<text x="26" y="30" class="n">PN-06 · ERASURE · COLUMN-LINEAGE GDPR ERASURE + ADVERSARY</text>
+
+<!-- retention -->
+<rect x="250" y="54" width="140" height="30" class="b"/>
+<text x="320" y="67" text-anchor="middle">RETENTION_OBLIGATIONS</text>
+<text x="320" y="78" text-anchor="middle" class="s">LEGAL BASIS PER TABLE</text>
+<line x1="320" y1="84" x2="320" y2="100" class="l" marker-end="url(#aw)"/>
+
+<!-- main row -->
+<rect x="16" y="100" width="96" height="56" class="bk"/>
+<text x="64" y="122" text-anchor="middle" class="n k">ESTATE.TS</text>
+<text x="64" y="136" text-anchor="middle" class="s">SQLITE ESTATE</text>
+<text x="64" y="147" text-anchor="middle" class="s">+ CATALOGUE</text>
+
+<rect x="144" y="100" width="96" height="56" class="bk"/>
+<text x="192" y="122" text-anchor="middle" class="n k">DISCOVER()</text>
+<text x="192" y="136" text-anchor="middle" class="s">LINEAGE CLOSURE</text>
+<text x="192" y="147" text-anchor="middle" class="s">DERIVEDFROM</text>
+
+<rect x="272" y="100" width="96" height="56" class="bk"/>
+<text x="320" y="122" text-anchor="middle" class="n k">PLANFOR()</text>
+<text x="320" y="136" text-anchor="middle" class="s">ACT VS RETAIN</text>
+
+<rect x="400" y="100" width="96" height="56" class="bk"/>
+<text x="448" y="122" text-anchor="middle" class="n k">ERASE()</text>
+<text x="448" y="136" text-anchor="middle" class="s">DRY RUN DEFAULT</text>
+
+<rect x="528" y="100" width="96" height="56" class="b"/>
+<text x="576" y="122" text-anchor="middle" class="n">ERASURE</text>
+<text x="576" y="134" text-anchor="middle" class="n">CERTIFICATE</text>
+<text x="576" y="147" text-anchor="middle" class="s">ROWS + RETAINED</text>
+
+<line x1="112" y1="128" x2="144" y2="128" class="lk" marker-end="url(#ac)"/>
+<line x1="240" y1="128" x2="272" y2="128" class="lk" marker-end="url(#ac)"/>
+<line x1="368" y1="128" x2="400" y2="128" class="lk" marker-end="url(#ac)"/>
+<line x1="496" y1="128" x2="528" y2="128" class="lk" marker-end="url(#ac)"/>
+
+<!-- readouts -->
+<line x1="64" y1="156" x2="64" y2="196" class="d"/>
+<line x1="192" y1="156" x2="192" y2="196" class="d"/>
+<rect x="16" y="196" width="96" height="40" class="bk"/>
+<text x="64" y="215" text-anchor="middle" class="big">16</text>
+<text x="64" y="228" text-anchor="middle" class="s">PII COLUMNS</text>
+<rect x="128" y="196" width="96" height="40" class="bk"/>
+<text x="176" y="215" text-anchor="middle" class="big">5</text>
+<text x="176" y="228" text-anchor="middle" class="s">STORES</text>
+
+<!-- adversary row -->
+<rect x="272" y="224" width="96" height="56" class="b" stroke-dasharray="4 3"/>
+<text x="320" y="246" text-anchor="middle" class="n">NAIVEERASE()</text>
+<text x="320" y="260" text-anchor="middle" class="s">TABLE-LIST</text>
+<text x="320" y="271" text-anchor="middle" class="s">BASELINE</text>
+
+<rect x="400" y="224" width="96" height="56" class="bk"/>
+<text x="448" y="246" text-anchor="middle" class="n k">REIDENTIFY()</text>
+<text x="448" y="260" text-anchor="middle" class="s">ADVERSARY</text>
+<text x="448" y="271" text-anchor="middle" class="s">DIRECT, THEN QI</text>
+
+<polygon points="576,224 624,252 576,280 528,252" class="b"/>
+<text x="576" y="250" text-anchor="middle" class="s">IDENTIFIABLE?</text>
+<text x="576" y="261" text-anchor="middle" class="s">NAIVE YES</text>
+
+<line x1="448" y1="156" x2="448" y2="224" class="lk" marker-end="url(#ac)"/>
+<line x1="368" y1="252" x2="400" y2="252" class="l" stroke-dasharray="3 3" marker-end="url(#aw)"/>
+<line x1="496" y1="252" x2="528" y2="252" class="lk" marker-end="url(#ac)"/>
+
+<!-- legend -->
+<line x1="16" y1="326" x2="46" y2="326" class="lk"/>
+<text x="54" y="329" class="s">KEY PATH</text>
+<line x1="136" y1="326" x2="166" y2="326" class="l" stroke-dasharray="3 3"/>
+<text x="174" y="329" class="s">BASELINE / REFERENCE</text>
+<text x="624" y="329" text-anchor="end" class="s">LINEAGE: NOT IDENTIFIABLE</text>
+</svg>

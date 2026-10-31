@@ -1,0 +1,103 @@
+{
+  "groups": [
+    {
+      "name": "SQL & Databases",
+      "items": [
+        "SQL",
+        "PostgreSQL",
+        "CTEs",
+        "Window functions",
+        "Complex joins",
+        "Subqueries",
+        "Query tuning",
+        "EXPLAIN ANALYZE",
+        "Execution plans",
+        "Indexing"
+      ]
+    },
+    {
+      "name": "Python",
+      "items": [
+        "Python",
+        "pandas",
+        "NumPy",
+        "boto3",
+        "Data profiling",
+        "Data cleaning",
+        "Transformation",
+        "Workflow automation"
+      ]
+    },
+    {
+      "name": "Data Modeling & Cloud",
+      "items": [
+        "ETL/ELT",
+        "Staging and warehouse layers",
+        "Star schema",
+        "Fact/dimension design",
+        "Slowly changing dimensions",
+        "Source-to-target mapping",
+        "Delta Lake",
+        "AWS S3",
+        "EC2"
+      ]
+    },
+    {
+      "name": "BI & Visualization",
+      "items": [
+        "Tableau",
+        "Calculated fields",
+        "Parameters",
+        "Interactive dashboards",
+        "Excel",
+        "Pivot tables",
+        "KPI reporting",
+        "Data storytelling"
+      ]
+    },
+    {
+      "name": "Statistics & Analytics",
+      "items": [
+        "KPI design",
+        "Hypothesis testing",
+        "Confidence intervals",
+        "Segmentation",
+        "Correlation",
+        "Trend analysis",
+        "Root-cause analysis"
+      ]
+    },
+    {
+      "name": "Data Quality & Testing",
+      "items": [
+        "Completeness checks",
+        "Duplicate checks",
+        "Integrity checks",
+        "Source reconciliation",
+        "Business-rule validation",
+        "UAT test design"
+      ]
+    },
+    {
+      "name": "Practices",
+      "items": [
+        "Git",
+        "Technical documentation",
+        "Reproducible workflows",
+        "Requirements gathering",
+        "Stakeholder communication"
+      ]
+    },
+    {
+      "name": "Domains",
+      "items": [
+        "Retail and e-commerce",
+        "Marketplace",
+        "Inventory",
+        "Returns",
+        "Healthcare claims",
+        "Supply chain"
+      ]
+    }
+  ]
+}

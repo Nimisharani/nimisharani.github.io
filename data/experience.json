@@ -1,0 +1,97 @@
+{
+  "roles": [
+    {
+      "company": "Neiman Marcus Groups",
+      "logo": "assets/images/logos/neiman-marcus.svg",
+      "title": "Data Analyst",
+      "start": "Apr 2023",
+      "end": "Present",
+      "location": "Dallas, TX",
+      "description": "Owns end-to-end retail analytics across sales, returns and inventory, from the PostgreSQL warehouse and SQL transformation layer to KPI definitions and self-serve Tableau dashboards.",
+      "highlights": [
+        "Architected a retail analytics solution unifying 7 sources (OMS, POS, product master, marketplace, marketing, customer, inventory) into one PostgreSQL warehouse.",
+        "Designed a star-schema model with slowly changing dimensions, enabling year-over-year and trend reporting without manual snapshots.",
+        "Cut dashboard refresh times by ~50% by diagnosing slow queries with EXPLAIN ANALYZE and restructuring joins, filters and indexes.",
+        "Automated Python/pandas profiling of daily OMS, POS and marketplace feeds to block duplicate orders, empty files and invalid values before load.",
+        "Partnered with finance, merchandising and marketing to define 20+ KPIs, ending conflicting numbers across teams.",
+        "Owned OMS-to-marketplace reconciliation; documented fixes became the standard reconciliation process."
+      ],
+      "technologies": [
+        "PostgreSQL",
+        "SQL",
+        "CTEs",
+        "Window functions",
+        "EXPLAIN ANALYZE",
+        "Python",
+        "pandas",
+        "Tableau",
+        "Git"
+      ]
+    },
+    {
+      "company": "Baylor Scott & White",
+      "logo": "assets/images/logos/baylor-scott-white.svg",
+      "title": "Data Analyst",
+      "start": "Oct 2022",
+      "end": "Mar 2023",
+      "location": "Irving, TX",
+      "description": "Delivered healthcare claims analytics across eligibility, provider, benefits and payment systems for the operations team.",
+      "highlights": [
+        "Tracked claims volume, turnaround time, denial rates and payment discrepancies to flag trends for operations follow-up.",
+        "Built reusable Python/pandas data-quality scripts catching duplicate claims, missing or invalid fields and mismatched member/provider IDs.",
+        "Reconciled claims, adjustments and payments to source records, confirming reported totals.",
+        "Maintained weekly Tableau dashboards of claims KPIs and processing trends for the operations team.",
+        "Ran UAT on new claims reports and documented data definitions and KPI logic to keep reporting consistent."
+      ],
+      "technologies": [
+        "Python",
+        "pandas",
+        "Tableau",
+        "SQL"
+      ]
+    },
+    {
+      "company": "Relevance lab",
+      "logo": "assets/images/logos/relevance-lab.png",
+      "title": "Jr Data Analyst",
+      "start": "June 2020",
+      "end": "May 2022",
+      "location": "Bengaluru, Karnataka",
+      "description": "Supply-chain, sales and inventory analytics, data ingestion and reporting automation for business stakeholders.",
+      "highlights": [
+        "Reduced delivery time by 25% by analyzing shipment data in Python to pinpoint supply-chain delays and recommending process changes.",
+        "Automated data extraction and recurring reporting pipelines, saving ~9 hours of manual work per week.",
+        "Built API-based ingestion from the inventory processing application into a Delta Lake on AWS S3, the team's central inventory store.",
+        "Built Tableau dashboards tracking supply-chain delays by product and daily revenue by region.",
+        "Led analysis projects from design to production, improving data accuracy and customer satisfaction by ~20%."
+      ],
+      "technologies": [
+        "Python",
+        "SQL",
+        "PostgreSQL",
+        "Delta Lake",
+        "AWS S3",
+        "APIs",
+        "Tableau"
+      ]
+    },
+    {
+      "company": "Kone",
+      "logo": "assets/images/logos/kone.png",
+      "title": "Data Analyst Intern",
+      "start": "Aug 2019",
+      "end": "May 2020",
+      "location": "Chennai, Tamilnadu",
+      "description": "Cleaned operational data and built trend reporting for internal stakeholders.",
+      "highlights": [
+        "Cleaned and standardized operational data in Excel and wrote SQL queries validated against existing reports.",
+        "Built pivot-table summaries and charts of monthly operational trends and presented recommendations to internal stakeholders.",
+        "Simplified data collection, reducing rework caused by inconsistent entries."
+      ],
+      "technologies": [
+        "Excel",
+        "SQL"
+      ]
+    }
+  ]
+}

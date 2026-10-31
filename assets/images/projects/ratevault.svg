@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-08 ratevault schematic</title>
+<desc>Risk feeds the pure price() function, which calls rateAsOf(valid, known) on the bitemporal rate table. issueQuote(token) stores quotes. repriceAsOf replays stored quotes to give as-quoted and as-corrected premiums.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="k" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;fill:#EAF3FB;text-transform:uppercase}
+.s{fill-opacity:0.7}
+.k{fill:#9FDBFF}
+.n{font-size:11px;fill:#9FDBFF}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.h{fill:none;stroke:#9FDBFF;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.q{fill:none;stroke:#9FDBFF;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect class="b" x="16" y="16" width="608" height="20"/>
+<text x="24" y="30" style="font-size:10px">PN-08 · RATEVAULT · BITEMPORAL QUOTE ENGINE</text>
+
+<rect class="b" x="16" y="60" width="110" height="50"/>
+<text x="24" y="76" class="k" style="font-size:10px">RISK</text>
+<text x="24" y="90" class="s">AGE · VEH GROUP</text>
+<text x="24" y="102" class="s">AREA · NCD</text>
+
+<rect class="h" x="160" y="60" width="120" height="50"/>
+<text x="168" y="78" class="k" style="font-size:10px">PRICE()</text>
+<text x="168" y="92" class="s">PURE FUNCTION</text>
+<text x="168" y="103" class="s">ROUNDS ONCE</text>
+
+<rect class="h" x="316" y="60" width="150" height="50"/>
+<text x="324" y="78" class="k" style="font-size:10px">TEMPORAL LAYER</text>
+<text x="324" y="92" class="s">BOOKRATE / RATEASOF</text>
+<text x="324" y="103" class="s">(VALID, KNOWN)</text>
+
+<rect class="h" x="500" y="60" width="124" height="50"/>
+<rect class="b" x="504" y="64" width="116" height="42" stroke-dasharray="3 3"/>
+<text x="512" y="82" class="k" style="font-size:10px">RATE TABLE</text>
+<text x="512" y="96" class="s">VALID + TX RANGES</text>
+
+<line class="q" x1="126" y1="85" x2="160" y2="85" marker-end="url(#k)"/>
+<line class="q" x1="280" y1="85" x2="316" y2="85" marker-end="url(#k)"/>
+<line class="q" x1="466" y1="85" x2="500" y2="85" marker-end="url(#k)"/>
+
+<rect class="b" x="16" y="170" width="110" height="44"/>
+<text x="24" y="188" style="font-size:10px">QUOTE TABLE</text>
+<text x="24" y="202" class="s">UNIQUE TOKEN</text>
+
+<rect class="b" x="160" y="170" width="100" height="44"/>
+<text x="168" y="188" style="font-size:10px">ISSUEQUOTE</text>
+<text x="168" y="202" class="s">(TOKEN)</text>
+<line class="l" x1="200" y1="170" x2="200" y2="110" marker-end="url(#a)"/>
+<line class="l" x1="160" y1="192" x2="126" y2="192" marker-end="url(#a)"/>
+
+<rect class="h" x="160" y="280" width="120" height="44"/>
+<text x="168" y="298" class="k" style="font-size:10px">REPRICEASOF</text>
+<text x="168" y="312" class="s">REPLAY QUOTES</text>
+<polyline class="l" points="160,302 71,302 71,214" marker-end="url(#a)"/>
+<polyline class="l" points="272,280 272,110" marker-end="url(#a)"/>
+
+<text x="330" y="152" class="s">REPLAY A · TX = ISSUE TIME</text>
+<text x="330" y="166" class="s">REPLAY B · TX = NOW</text>
+<text x="330" y="196" class="s">SAME TOKEN → SAME PREMIUM</text>
+<line class="l" x1="316" y1="140" x2="316" y2="170" stroke-dasharray="3 3"/>
+
+<rect class="h" x="330" y="236" width="294" height="88"/>
+<text x="342" y="252">ASQUOTED VS ASCORRECTED (GBP)</text>
+<line class="l" x1="280" y1="302" x2="330" y2="302" stroke="#9FDBFF" marker-end="url(#k)"/>
+
+<rect class="b" x="342" y="262" width="86" height="48"/>
+<text x="350" y="278" class="s">AS QUOTED</text>
+<text x="350" y="298" class="n">1995.19</text>
+<rect class="b" x="440" y="262" width="86" height="48"/>
+<text x="448" y="278" class="s">CORRECTED</text>
+<text x="448" y="298" class="n">1671.64</text>
+<rect class="h" x="538" y="262" width="78" height="48"/>
+<text x="546" y="278" class="s">OWED</text>
+<text x="546" y="298" class="n">323.55</text>
+</svg>

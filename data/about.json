@@ -1,0 +1,38 @@
+{
+  "paragraphs": [
+    "I build end-to-end analytics: warehouse models, SQL transformation layers, automated data-quality checks and self-serve Tableau dashboards that give business teams a single trusted view of their numbers.",
+    "At Neiman Marcus Groups I unified 7 sources (OMS, POS, product master, marketplace reconciliation, marketing, customer and inventory) into one PostgreSQL warehouse with a star-schema model and slowly changing dimensions, and cut dashboard refresh times by ~50% through query tuning.",
+    "Before that I delivered claims analytics and reusable data-quality scripts at Baylor Scott & White, and at Relevance lab I reduced delivery time by 25% through shipment analysis and saved ~9 hours of manual work per week by automating reporting pipelines.",
+    "I care about numbers people can sign off on: I partner with finance, merchandising and marketing to define KPIs, validate every one against source data through UAT, and document schemas, lineage and logic for easy handoff."
+  ],
+  "highlights": [
+    {
+      "label": "Discipline",
+      "value": "Data analytics"
+    },
+    {
+      "label": "Current employer",
+      "value": "Neiman Marcus Groups"
+    },
+    {
+      "label": "Base",
+      "value": "Redmond, WA"
+    },
+    {
+      "label": "Experience",
+      "value": "6+ years"
+    },
+    {
+      "label": "Core stack",
+      "value": "SQL, Python, Tableau"
+    },
+    {
+      "label": "Domains",
+      "value": "Retail, healthcare claims, supply chain"
+    },
+    {
+      "label": "Degree",
+      "value": "MTech Integrated Software Engineering, VIT University"
+    }
+  ]
+}

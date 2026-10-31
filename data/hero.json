@@ -1,0 +1,47 @@
+{
+  "name": "Sai Nimisha Kakarla",
+  "title": "Senior Data Analyst · SQL, Python & Tableau",
+  "summary": "I'm a Senior Data Analyst with 6+ years across retail, healthcare and supply chain, building end-to-end analytics in SQL, Python and Tableau. I turn complex, multi-source data into governed KPIs and trusted insights that drive business decisions, from warehouse modeling and data-quality automation to self-serve dashboards.",
+  "location": "Redmond, WA",
+  "readouts": [
+    {
+      "value": "6+ yrs",
+      "label": "in retail, healthcare and supply chain analytics"
+    },
+    {
+      "value": "7",
+      "label": "sources unified into one PostgreSQL warehouse"
+    },
+    {
+      "value": "~50%",
+      "label": "faster dashboard refresh at Neiman Marcus"
+    },
+    {
+      "value": "20+",
+      "label": "KPIs defined with finance, merch and marketing"
+    }
+  ],
+  "ctas": [
+    {
+      "label": "View projects",
+      "href": "#projects",
+      "kind": "primary"
+    },
+    {
+      "label": "Resume",
+      "href": "assets/files/sai-kakarla-resume.pdf",
+      "kind": "resume"
+    },
+    {
+      "label": "Get in touch",
+      "href": "#contact",
+      "kind": "secondary"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/Nimisharani",
+    "linkedin": "https://www.linkedin.com/in/nimisha-reddy-810a84141",
+    "email": "nimmishareddy@gmail.com",
+    "phone": "515-867-9002"
+  }
+}

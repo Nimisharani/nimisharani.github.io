@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img">
+<title>PN-07 dagcache: schematic</title>
+<desc>Pipeline definitions and params feed a KeyBuilder with the Hasher. Keys feed status and the Runner. A hit restores outputs; a miss runs the stage and stores outputs and a manifest. Results go to the lock file and local cache, which syncs with a remote. gc and lineage read the cache.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="ac" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L6 3L0 6z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:0.06em;fill:#EAF3FB;text-anchor:middle;text-transform:uppercase}
+.b{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.k{fill:#0D3B66;stroke:#9FDBFF;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.8;stroke-width:1}
+.d{fill:none;stroke:#EAF3FB;stroke-opacity:0.5;stroke-width:1;stroke-dasharray:3 3}
+.a{fill:none;stroke:#9FDBFF;stroke-width:1}
+.m{font-size:10px}
+.s{font-size:9px;fill-opacity:0.7}
+.n{font-size:11px;fill:#9FDBFF}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect class="b" x="16" y="16" width="608" height="20"/>
+<text class="m" x="320" y="30">PN-07 · DAGCACHE · CONTENT-ADDRESSED PIPELINE RUNNER</text>
+
+<rect class="b" x="16" y="52" width="104" height="36"/>
+<text class="m" x="68" y="67">DAGCACHE.YAML</text>
+<text class="s" x="68" y="80">PIPELINE.PY</text>
+<rect class="b" x="148" y="52" width="104" height="36"/>
+<text class="m" x="200" y="67">PIPELINE</text>
+<text class="s" x="200" y="80">DAG: DEPS/OUTS</text>
+<rect class="b" x="16" y="116" width="104" height="32"/>
+<text class="m" x="68" y="135">PARAMS.YAML</text>
+<rect class="b" x="16" y="176" width="104" height="36"/>
+<text class="m" x="68" y="191">HASHER</text>
+<text class="s" x="68" y="204">+ STAT CACHE</text>
+<rect class="k" x="148" y="116" width="104" height="96"/>
+<text class="m" x="200" y="144">KEYBUILDER</text>
+<text class="s" x="200" y="164">CODE</text>
+<text class="s" x="200" y="177">+ PARAMS</text>
+<text class="s" x="200" y="190">+ INPUT DIGESTS</text>
+
+<line class="l" x1="120" y1="70" x2="146" y2="70" marker-end="url(#ar)"/>
+<line class="l" x1="200" y1="88" x2="200" y2="114" marker-end="url(#ar)"/>
+<line class="l" x1="120" y1="132" x2="146" y2="132" marker-end="url(#ar)"/>
+<line class="l" x1="120" y1="194" x2="146" y2="194" marker-end="url(#ar)"/>
+
+<polyline class="a" points="252,164 266,164"/>
+<polyline class="a" points="266,98 266,175"/>
+<line class="a" x1="266" y1="98" x2="278" y2="98" marker-end="url(#ac)"/>
+<line class="a" x1="266" y1="175" x2="278" y2="175" marker-end="url(#ac)"/>
+
+<rect class="b" x="280" y="82" width="92" height="32"/>
+<text class="m" x="326" y="96">STATUS</text>
+<text class="s" x="326" y="107">PLAN()</text>
+<rect class="b" x="280" y="150" width="92" height="50"/>
+<text class="m" x="326" y="168">RUNNER</text>
+<text class="s" x="326" y="180">DAGEXECUTOR</text>
+<text class="s" x="326" y="192">-J N · FLOCK</text>
+
+<polyline class="l" points="372,160 382,160 382,126 408,126" marker-end="url(#ar)"/>
+<line class="l" x1="372" y1="184" x2="408" y2="184" marker-end="url(#ar)"/>
+<text class="s" x="386" y="121" style="text-anchor:start">HIT</text>
+<text class="s" x="378" y="180" style="text-anchor:start">MISS</text>
+
+<rect class="b" x="410" y="112" width="100" height="28"/>
+<text class="m" x="460" y="130">RESTORE OUTS</text>
+<rect class="b" x="410" y="170" width="100" height="28"/>
+<text class="m" x="460" y="188">RUN STAGE</text>
+<rect class="b" x="410" y="226" width="100" height="36"/>
+<text class="m" x="460" y="241">STORE OUTPUTS</text>
+<text class="s" x="460" y="254">+ MANIFEST</text>
+<line class="l" x1="460" y1="198" x2="460" y2="224" marker-end="url(#ar)"/>
+
+<rect class="b" x="540" y="108" width="84" height="40"/>
+<text class="m" x="582" y="125">LOCK FILE</text>
+<text class="s" x="582" y="138">DAGCACHE.LOCK</text>
+<line class="l" x1="510" y1="126" x2="538" y2="126" marker-end="url(#ar)"/>
+<polyline class="l" points="510,244 525,244 525,140 538,140" marker-end="url(#ar)"/>
+
+<line class="l" x1="460" y1="262" x2="460" y2="286" marker-end="url(#ar)"/>
+<rect class="b" x="410" y="288" width="100" height="34"/>
+<text class="m" x="460" y="303">LOCAL CACHE</text>
+<text class="s" x="460" y="315">.DAGCACHE/CACHE</text>
+<rect class="b" x="540" y="288" width="84" height="34"/>
+<text class="m" x="582" y="303">REMOTE</text>
+<text class="s" x="582" y="315">DIR OR S3</text>
+<line class="l" x1="510" y1="299" x2="538" y2="299" marker-end="url(#ar)"/>
+<line class="l" x1="540" y1="311" x2="512" y2="311" marker-end="url(#ar)"/>
+<text class="s" x="525" y="336">PUSH / PULL</text>
+
+<rect class="b" x="280" y="236" width="92" height="30"/>
+<text class="m" x="326" y="249">LINEAGE</text>
+<text class="s" x="326" y="260">PROVENANCE</text>
+<rect class="b" x="280" y="290" width="92" height="32"/>
+<text class="m" x="326" y="304">GC</text>
+<text class="s" x="326" y="315">MARK + SWEEP</text>
+<polyline class="d" points="372,251 392,251 392,306"/>
+<line class="l" x1="372" y1="306" x2="408" y2="306" marker-end="url(#ar)"/>
+
+<line class="a" x1="16" y1="248" x2="40" y2="248" marker-end="url(#ac)"/>
+<text class="s" x="48" y="251" style="text-anchor:start">KEY PATH</text>
+<line class="d" x1="16" y1="266" x2="40" y2="266"/>
+<text class="s" x="48" y="269" style="text-anchor:start">READS CACHE</text>
+
+<rect class="b" x="16" y="296" width="104" height="32"/>
+<text class="n" x="68" y="310">165</text>
+<text class="s" x="68" y="322">TESTS</text>
+<rect class="b" x="148" y="296" width="104" height="32"/>
+<text class="n" x="200" y="310">~4,600</text>
+<text class="s" x="200" y="322">LINES OF PYTHON</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-04 pacingloop architecture</title>
+<desc>Blueprint schematic: sim.ts feeds detect.ts, which also uses baseline.ts, to produce explained alerts. sim.ts also feeds control.ts, then a hard spend ceiling, then the spend and multiplier trace and audit log.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;fill:#EAF3FB;text-anchor:middle;text-transform:uppercase}
+.t{font-size:10px}
+.s{fill-opacity:0.7}
+.l{text-anchor:start}
+.a{fill:#9FDBFF;font-size:11px}
+.b{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.r{fill:#0D3B66;stroke:#9FDBFF;stroke-width:1}
+.f{fill:none;stroke:#9FDBFF;stroke-width:1}
+.d{fill:none;stroke:#EAF3FB;stroke-opacity:0.5;stroke-width:1;stroke-dasharray:3 3}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="20" fill="none" stroke="#EAF3FB" stroke-opacity="0.6"/>
+<text class="t l" x="24" y="30">PN-04 · PACINGLOOP · SEASONAL BASELINES + DAMPED PACING</text>
+
+<text class="s l" x="16" y="60">DETECTION LANE</text>
+<text class="s l" x="16" y="240">CONTROL LANE</text>
+
+<rect class="b" x="168" y="48" width="120" height="48"/>
+<text class="t" x="228" y="62">BASELINE.TS</text>
+<text class="s" x="228" y="75">HOUR-OF-WEEK</text>
+<text class="s" x="228" y="87">MEDIAN + MAD</text>
+
+<rect class="r" x="340" y="52" width="110" height="40"/>
+<text class="a" x="395" y="69">168</text>
+<text class="s" x="395" y="83">BUCKETS</text>
+<line class="d" x1="288" y1="72" x2="340" y2="72"/>
+
+<rect class="b" x="16" y="150" width="112" height="64"/>
+<text class="t" x="72" y="166">SIM.TS</text>
+<text class="s" x="72" y="179">SEASONAL STREAM</text>
+<text class="s" x="72" y="191">+ PLANTED</text>
+<text class="s" x="72" y="203">INCIDENTS</text>
+
+<rect class="b" x="168" y="116" width="120" height="56"/>
+<text class="t" x="228" y="132">DETECT.TS</text>
+<text class="s" x="228" y="146">MULTI-SIGNAL</text>
+<text class="s" x="228" y="158">CLASSIFIER</text>
+
+<rect class="b" x="340" y="116" width="110" height="56"/>
+<text class="t" x="395" y="132">ALERTS</text>
+<text class="s" x="395" y="146">EXPLAINED</text>
+<text class="s" x="395" y="158">PER INCIDENT</text>
+
+<rect class="r" x="502" y="116" width="122" height="56"/>
+<text class="a" x="563" y="136">4/4 DETECTED</text>
+<text class="a" x="563" y="157">0.00 FALSE/WK</text>
+<line class="d" x1="450" y1="144" x2="502" y2="144"/>
+
+<rect class="b" x="168" y="232" width="120" height="56"/>
+<text class="t" x="228" y="248">CONTROL.TS</text>
+<text class="s" x="228" y="262">DAMPED</text>
+<text class="s" x="228" y="274">CONTROLLER</text>
+
+<rect class="b" x="340" y="232" width="110" height="56"/>
+<text class="t" x="395" y="248">HARD SPEND</text>
+<text class="t" x="395" y="260">CEILING</text>
+<text class="s" x="395" y="276">APPLYCEILING</text>
+
+<rect class="b" x="502" y="224" width="122" height="72"/>
+<text class="t" x="563" y="242">OUTPUT</text>
+<text class="s" x="563" y="258">SPEND</text>
+<text class="s" x="563" y="270">MULTIPLIER TRACE</text>
+<text class="s" x="563" y="282">AUDIT LOG</text>
+
+<line class="f" x1="228" y1="96" x2="228" y2="115" marker-end="url(#ar)"/>
+<polyline class="f" points="128,170 148,170 148,144 167,144" marker-end="url(#ar)"/>
+<polyline class="f" points="128,196 148,196 148,260 167,260" marker-end="url(#ar)"/>
+<line class="f" x1="288" y1="144" x2="339" y2="144" marker-end="url(#ar)"/>
+<line class="f" x1="288" y1="260" x2="339" y2="260" marker-end="url(#ar)"/>
+<line class="f" x1="450" y1="260" x2="501" y2="260" marker-end="url(#ar)"/>
+
+<text class="s l" x="16" y="332">CEILING IS APPLIED INDEPENDENTLY OF THE CONTROLLER</text>
+</svg>
