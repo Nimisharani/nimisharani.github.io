@@ -84,6 +84,8 @@ h2{font-size:clamp(2.1rem,4.6vw,3.6rem)}
 .role-card{display:grid;grid-template-columns:260px 1fr;gap:var(--s4);padding-top:var(--s3);border-top:2px solid var(--navy)}
 .role-meta .logo{background:#fff;border:1px solid #bcd3e8;height:64px;width:170px;display:flex;align-items:center;justify-content:center;padding:.5rem;margin-bottom:var(--s2)}
 .role-meta .logo{background:var(--navy);border-color:var(--navy);color:var(--cyan);font:600 1.5rem var(--f-mono);letter-spacing:.08em}
+.role-meta .logo{padding:.55rem 1rem}
+.role-meta .logo img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 .card.last{order:9}
 .more-h{font:600 .85rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin:var(--s5) 0 var(--s3);display:flex;gap:.7rem;align-items:center}
 .more-h::after{content:"";flex:1;height:1px;background:var(--line)}

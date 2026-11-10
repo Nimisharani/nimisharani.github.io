@@ -52,7 +52,7 @@
     },
     {
       "company": "Relevance lab",
-      "logo": "assets/images/logos/relevance-lab.png",
+      "logo": "assets/images/logos/relevance-lab.svg",
       "title": "Jr Data Analyst",
       "start": "June 2020",
       "end": "May 2022",
@@ -77,7 +77,7 @@
     },
     {
       "company": "Kone",
-      "logo": "assets/images/logos/kone.png",
+      "logo": "assets/images/logos/kone.svg",
       "title": "Data Analyst Intern",
       "start": "Aug 2019",
       "end": "May 2020",
